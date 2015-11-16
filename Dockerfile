@@ -1,7 +1,7 @@
-FROM ubuntu
+FROM centos
 MAINTAINER Uwe Dauernheim <uwe@dauernheim.net>
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y libguestfs-tools
+RUN yum -y update && \
+    yum -y install libguestfs-tools
 
 ENTRYPOINT ["guestfish"]
