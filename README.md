@@ -1,4 +1,4 @@
-# libguestfs-tools container
+# libguestfs-tools Docker container
 
 A docker container that allows to use [libguestfs-tools](http://libguestfs.org)
 for for accessing and modifying virtual machine disk images mounted as volumes.

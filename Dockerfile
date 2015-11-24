@@ -1,9 +1,15 @@
-FROM centos
+FROM ubuntu:15.10
 MAINTAINER Uwe Dauernheim <uwe@dauernheim.net>
 
-RUN yum -y update && \
-    yum -y install libguestfs-tools
+ENV DEBIAN_FRONTEND=noninteractive
 
-ENV LIBGUESTFS_BACKEND=direct
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+          libguestfs-tools \
+          qemu-utils \
+          linux-image-generic
+
+ENV LIBGUESTFS_BACKEND=direct \
+    HOME=/root
 
 ENTRYPOINT ["guestfish"]
