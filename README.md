@@ -1,12 +1,13 @@
 # libguestfs-tools Docker container
 
-A docker container that allows to use [libguestfs-tools](http://libguestfs.org)
-for for accessing and modifying virtual machine disk images mounted as volumes.
+A Docker container that allows to use [libguestfs-tools](http://libguestfs.org)
+for accessing and modifying virtual machine disk images mounted as volumes.
+
 
 ## Usage
 
     $ docker build -t guestfs .
-    $ docker run -it -v my_image.vmdk:/my_image.vmdk guestfs --ro -i -a /my_image.vmdk
+    $ docker run --rm -it -v my_image.vmdk:/my_image.vmdk guestfs --ro -i -a /my_image.vmdk
 
     Welcome to guestfish, the guest filesystem shell for
     editing virtual machine filesystems and disk images.
