@@ -1,6 +1,6 @@
-# libguestfs-tools Docker container
+# libguestfs-tools Docker image
 
-A Docker container that allows to use [libguestfs-tools](http://libguestfs.org)
+A Docker image that allows to use [libguestfs-tools](http://libguestfs.org)
 for accessing and modifying virtual machine disk images mounted as volumes.
 
 
